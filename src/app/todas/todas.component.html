@@ -1,0 +1,51 @@
+<div (scrolled)="onScroll()" infiniteScroll [infiniteScrollDistance]="0" [infiniteScrollThrottle]="200">
+    <div class="row justify-content-center mr-0">
+        <ng-container *ngIf="noticias; else porDefecto">
+            <div *ngFor="let noticia of noticias" class="card col-12 col-sm-10 col-md-7 col-lg-4" style="width: 18rem;">
+                <div class="card-body row justify-content-center">
+                    <div class="col-12 text-center mb-4" *ngIf="noticia.Poster != 'N/A'; else notShow">
+                        <img class="imagen" src="{{noticia.Poster}}" />
+                    </div>
+                    <ng-template class="col-12" #notShow>
+                        <img class="imagen"
+                            src="https://x.kinja-static.com/assets/images/logos/placeholders/default.png" />
+                    </ng-template>
+
+                    <h1 class="card-title col-12">{{noticia.Title}}</h1>
+                    <p class="card-text col-12">{{noticia.Type}}</p>
+                    <a (click)="modal(noticia.imdbID)" class="btn btn-outline-secondary col-12">Descripcion</a>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #porDefecto>
+            <div class="col-12 col-md-4 mt-5">
+                <div class="row mb-5">
+                    <div class="col-6">
+                        <img class="img-fluid"
+                            src="https://yt3.ggpht.com/a/AGF-l7-Apx1H6337vrUIWzw_WDsi9I9U0TM3zWSgIw=s900-c-k-c0xffffffff-no-rj-mo"
+                            alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid"
+                            src="https://pbs.twimg.com/profile_images/1072505472715030530/6VANFAsE_400x400.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid" src="https://www.iom.int/sites/default/files/gmff/logo_simple.png"
+                            alt="">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <img class="img-fluid"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/CoMix_Wave_Films_Logo.svg/1200px-CoMix_Wave_Films_Logo.svg.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 mt-5 pr-0 mb-5">
+                <img class="img-fluid"
+                    src="https://growproexperience.com/wp-content/uploads/2019/05/portada-1280x640.jpg" alt="">
+            </div>
+        </ng-template>
+    </div>
+</div>

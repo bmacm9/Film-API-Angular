@@ -1,0 +1,24 @@
+.footer {
+    height: 20vh;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+a:hover{
+    color: white;
+    font-weight: bold;
+}
