@@ -1,4 +1,4 @@
-[Try Me](https://zealous-morse-d2c578.netlify.com/'ProyectoApi'/)
+[Try Me](https://zealous-morse-d2c578.netlify.com/)
 
 # ProyectoApi
 
